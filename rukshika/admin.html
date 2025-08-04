@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Admin</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            background-image: url('image/image4.jpg');
+        }
+       .ID{
+        padding-left: 140px;
+        padding-right: 140px;
+       }
+       .password{
+        padding-left: 140px;
+        padding-right: 140px;
+       }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-2">&nbsp;  
+             <a href="firstpage.html">
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
+               HOMEPAGE
+              </button><br></a><br></div> 
+        <div class="col-md-8" style="padding-top:120px ;" >
+            <h1 style="font-size: 70px;">ADMIN LOGIN</h1><br><br><br>
+            
+            <form name="f1" action="Alogin.php" onsubmit = "return validation()" method = "POST">
+                <div class="ID">
+                    <input class="form-control"  type="text" name="id"   id="id" placeholder="Enter ID..."><br><br>
+                </div>
+        
+                <div class="password">
+                    <input class="form-control" type="password" id="pass" name="pass" placeholder="Enter Password..."><br>
+                </div>
+
+                <button type="submit" id="btn" class="btn btn-primary btn-lg" style="background-color: #22c4c4;color: black;">Login</button><br>
+            <br>
+                <a href="firstpage.html">
+                <button type="button" class="btn btn-primary btn-sm" style="color:black;border:2px solid black;">Back</button>  </a> 
+            </form>
+              
+        </div>
+        <div class="col-md-2">&nbsp;</div>
+    </div>
+    
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.id.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("ID and Password fields cannot be empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("ID cannot be empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("ID field cannot be empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>
+</html>
